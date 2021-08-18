@@ -49,4 +49,23 @@ interes = (capital*razon*tiempo)/(100*unidad_tiempo);
 
 print(interes);
 
-##6) Escribir un algoritmo que convierta las horas ingresadas en minutos y en segundos, y las muestre por pantalla. 
+##6) Escribir un algoritmo que convierta las horas ingresadas en minutos y en segundos, y las muestre por pantalla
+
+horas = 2;
+minutos = horas*60;
+segundos = horas*3600;
+print(horas,'equivalen a',minutos,'minutos o', segundos, 'segundos');
+
+##7) Escribir un algoritmo que convierta los valores ingresados en cms. a pulgadas. Recordar que una pulgada equivale a 2.5 cm
+
+cms = 100;
+pulgadas = cms/2.5
+
+print(cms, 'cms equivalen a',pulgadas,'pulgadas');
+
+## Dada una cantidad en pesos, obtener la equivalencia en dólares, asumiendo que la unidad cambiaria es un dato desconocido, que varía minuto a minuto.
+cantidad_pesos = 1000;
+unidad_cambiaria = ;
+cantidad_dolares = cantidad_pesos / unidad_cambiaria
+
+print(cantidad_pesos,'equivalen a',cantidad_dolares,'dolares')
