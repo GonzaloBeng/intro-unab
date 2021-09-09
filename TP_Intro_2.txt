@@ -1,0 +1,147 @@
+1)
+
+Inicio
+//Declarar las variables
+Nombre: String
+Edad: Entero
+
+//Ingreso de Datos
+Escribir "Ingrese su nombre"
+Leer Nombre
+Escribir "Ingrese su edad"
+Leer Edad
+
+//Programa
+
+If Edad >= 18 entonces
+    Escribir Nombre, Edad
+Ifelse
+    Escribir "Es menor de edad."
+FinIf
+Fin
+
+2)
+
+Inicio
+//Declarar las variables
+Actividad: String
+Tiempo: Entero
+
+//Ingreso de Datos
+Escribir "Ingrese actividad"
+Leer Actividad
+Escribir "Ingrese tiempo"
+Leer Tiempo
+
+//Programa
+If Actividad = Dormir entonces
+    Escribir (Tiempo * 1.08)
+Ifelse
+    Escribir (Tiempo * 1.66)
+FinIf
+Fin
+
+3)
+Inicio
+//Declarar las variables
+SueldoActual: Entero
+Antigüedad: Entero
+
+//Ingreso de Datos
+Escribir "Ingrese su sueldo actual"
+Leer SueldoActual
+Escribir "Ingrese su antigüedad"
+Leer Antigüedad
+
+//Programa
+If SueldoActual < 1000 entonces
+    If Antigüedad > 10 entonces
+        Escribir "RECIBE AUMENTO"
+    Ifelse
+        Escribir "NO RECIBE AUMENTO"
+Ifelse
+    Escribir "NO RECIBE AUMENTO"
+FinIf
+Fin
+
+4)
+Inicio
+//Declarar las variables
+NombreArticulo: String
+Clave: String
+PrecioOriginal: Real
+PrecioDescuento: Real
+
+//Ingreso de Datos
+Escribir "Ingrese el nombre del artículo"
+Leer NombreArticulo
+Escribir "Ingrese el precio del artículo"
+Leer PrecioOriginal
+Escribir "Ingrese Clave"
+Leer Clave
+
+//Programa
+If Clave = "01" entonces
+    PrecioDescuento = PrecioOriginal * 0.10
+
+    Escribir NombreArticulo
+    Escribir Clave
+    Escribir PrecioOriginal
+    Escribir (PrecioOriginal - PrecioDescuento) 
+Ifelse
+    PrecioDescuento = PrecioOriginal * 0.20
+    
+    Escribir NombreArticulo
+    Escribir Clave
+    Escribir PrecioOriginal
+    Escribir (PrecioOriginal - PrecioDescuento)
+FinIf
+Fin
+
+5)
+Inicio
+//Declaro las variables
+PrecioCamisa: Real
+CantCamisas: Entero
+PrecioTotal: Real
+Descuento: Real
+
+//Ingreso de Datos
+Escribir "Ingresar precio de la camisa"
+Leer PrecioCamisa
+Escribir "Ingresas cantidad de camisas compradas"
+Leer CantCamisas
+
+//Programa
+If CantCamisas >= 3 entonces
+    PrecioTotal = PrecioCamisa * CantCamisas
+    Descuento = PrecioTotal * 0.20
+    Escribir (PrecioTotal - Descuento)
+Ifelse
+    PrecioTotal = PrecioCamisa * CantCamisas
+    Descuento = PrecioTotal * 0.10
+    Escribir "El precio total es", PrecioTotal
+    Escribir "El descuento de su compra es", Descuento
+    Escribir "El precio con descuento es", (PrecioTotal - Descuento)
+FinIf
+Fin
+
+6)
+Inicio
+//Defino las variables
+Monto: Real
+Cuota: Real
+
+//Ingreso de Datos
+Escribir "Ingrese el monto financiado"
+Leer Monto
+
+//Programa
+If Monto =< 50000 entonces
+    Cuota = Monto * 0.03
+    Escribir "La cuota a abonar por el cliente sera de $", Cuota
+Ifelse
+    Cuota = Monto * 0.02
+    Escribir "La cuota a abonar por el cliente sera de $", Cuota
+FinIf
+Fin
