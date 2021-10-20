@@ -7,7 +7,7 @@ alumnosPublica = 0
 alumnosPrivada = 0
 
 while (True):
-    opcion = input('''\n Que tipo de Universidad concurres? Ingresa una opcion
+    opcion = input('''\n Que tipo de Universidad concurres? Ingresa el numero correspondiente
     1. Universidad publica
     2. Universidad Privada
     ''')
