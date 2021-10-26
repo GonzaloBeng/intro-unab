@@ -1,0 +1,29 @@
+
+
+{Declaro variables}
+Continua: Stirng
+MontoAcum: Entero 
+MontoVenta: Entero
+
+{Programa} 
+Continua <- "S"
+MontoAcum <- 0
+
+Mientras Continua <- "S" Hacer 
+    Escribir "Ingrese el monto de venta"
+    Leer MontoVenta
+    Si MontoVenta > 0 
+        MontoAcum = MontoAcum + MontoVenta
+    Sino MontoVenta < 0 
+        Escribir "Monto no valido"
+    DeOtroModo {No vimos la traducción de "Elif" para pseudocodigo}
+        Si MontoAcum > 1000 
+            Escribir "El monto total a pagar es", MontoAcum * 0.9
+            Break {No vimos la traducción de "Break" para pseudocodigo} 
+        Sino 
+            Escribir "El monto total a pagar es", MontoAcum
+            Break {No vimos la traducción de "Break" para pseudocodigo}
+        FinSi
+    FinSi
+FinMientras
+Fin
