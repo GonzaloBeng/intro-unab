@@ -1,0 +1,173 @@
+1)Ingresar el nombre y la edad de una persona. Se pide mostrar ambos datos
+(nombre y edad) solo si es mayor de edad, de lo contrario desplegar el mensaje
+“Es menor de edad”.
+
+Inicio
+//Declarar las variables
+Nombre: String
+Edad: Entero
+
+//Ingreso de Datos
+Escribir "Ingrese su nombre"
+Leer Nombre
+Escribir "Ingrese su edad"
+Leer Edad
+
+//Programa
+
+If Edad >= 18 entonces
+    Escribir Nombre, Edad
+Ifelse
+    Escribir "Es menor de edad."
+FinIf
+Fin
+
+2) Una persona enferma, que pesa 70 kg, se encuentra en reposo y desea saber
+cuántas calorías consume su cuerpo durante todo el tiempo que realiza una
+misma actividad. Las actividades que tiene permitido realizar son únicamente
+dormir o estar sentado en reposo. Los datos que tiene son que estando
+dormido consume 1.08 calorías por minuto y estando sentado en reposo
+consume 1.66 calorías por minuto. Serán datos de entrada: la actividad y el
+tiempo expresado en minutos.
+
+Inicio
+//Declarar las variables
+Actividad: String
+Tiempo: Entero
+
+//Ingreso de Datos
+Escribir "Ingrese actividad"
+Leer Actividad
+Escribir "Ingrese tiempo"
+Leer Tiempo
+
+//Programa
+If Actividad = Dormir entonces
+    Escribir (Tiempo * 1.08)
+Ifelse
+    Escribir (Tiempo * 1.66)
+FinIf
+Fin
+
+3) Ingresar el sueldo actual y la antigüedad de un empleado para luego mostrar la
+leyenda “RECIBE AUMENTO” o “NO RECIBE AUMENTO” teniendo en cuenta que,
+para recibir aumento, su sueldo debe ser menor a 1000 y la cantidad de años de
+antigüedad mayor a 10.
+
+Inicio
+//Declarar las variables
+SueldoActual: Entero
+Antigüedad: Entero
+
+//Ingreso de Datos
+Escribir "Ingrese su sueldo actual"
+Leer SueldoActual
+Escribir "Ingrese su antigüedad"
+Leer Antigüedad
+
+//Programa
+If SueldoActual < 1000 entonces
+    If Antigüedad > 10 entonces
+        Escribir "RECIBE AUMENTO"
+    Ifelse
+        Escribir "NO RECIBE AUMENTO"
+Ifelse
+    Escribir "NO RECIBE AUMENTO"
+FinIf
+Fin
+
+4) Hacer un programa que imprima el nombre de un artículo, clave, precio original
+y su precio con descuento. El descuento lo hace en base a la clave, si la clave es
+01 el descuento es del 10% y si la clave es 02 el descuento en del 20% (solo
+existen dos claves, y el descuento se calcula sobre el precio original). 
+
+Inicio
+//Declarar las variables
+NombreArticulo: String
+Clave: String
+PrecioOriginal: Real
+PrecioDescuento: Real
+
+//Ingreso de Datos
+Escribir "Ingrese el nombre del artículo"
+Leer NombreArticulo
+Escribir "Ingrese el precio del artículo"
+Leer PrecioOriginal
+Escribir "Ingrese Clave"
+Leer Clave
+
+//Programa
+If Clave = "01" entonces
+    PrecioDescuento = PrecioOriginal * 0.10
+
+    Escribir NombreArticulo
+    Escribir Clave
+    Escribir PrecioOriginal
+    Escribir (PrecioOriginal - PrecioDescuento) 
+Ifelse
+    PrecioDescuento = PrecioOriginal * 0.20
+    
+    Escribir NombreArticulo
+    Escribir Clave
+    Escribir PrecioOriginal
+    Escribir (PrecioOriginal - PrecioDescuento)
+FinIf
+Fin
+
+5) Hacer un programa que calcule el total a pagar por la compra de camisas. Si se
+compran tres camisas o más se aplica un descuento del 20% sobre el total de la
+compra y si son menos de tres camisas un descuento del 10%. El precio de cada
+camisa se ingresa junto a la cantidad de camisas vendidas
+
+Inicio
+//Declaro las variables
+PrecioCamisa: Real
+CantCamisas: Entero
+PrecioTotal: Real
+Descuento: Real
+
+//Ingreso de Datos
+Escribir "Ingresar precio de la camisa"
+Leer PrecioCamisa
+Escribir "Ingresas cantidad de camisas compradas"
+Leer CantCamisas
+
+//Programa
+If CantCamisas >= 3 entonces
+    PrecioTotal = PrecioCamisa * CantCamisas
+    Descuento = PrecioTotal * 0.20
+    Escribir (PrecioTotal - Descuento)
+Ifelse
+    PrecioTotal = PrecioCamisa * CantCamisas
+    Descuento = PrecioTotal * 0.10
+    Escribir "El precio total es", PrecioTotal
+    Escribir "El descuento de su compra es", Descuento
+    Escribir "El precio con descuento es", (PrecioTotal - Descuento)
+FinIf
+Fin
+
+6) Una compañía de seguros está abriendo un depto. de finanzas y estableció un
+programa para captar clientes, que consiste en lo siguiente: Si el monto por el
+que se efectúa la fianza es menor o igual que $50 000 la cuota a pagar será por
+el 3% del monto, y si el monto es mayor la cuota a pagar será el 2% del monto.
+La afianzadora desea determinar cuál será la cuota que deberá abonar cada
+cliente.
+
+Inicio
+//Defino las variables
+Monto: Real
+Cuota: Real
+
+//Ingreso de Datos
+Escribir "Ingrese el monto financiado"
+Leer Monto
+
+//Programa
+If Monto =< 50000 entonces
+    Cuota = Monto * 0.03
+    Escribir "La cuota a abonar por el cliente sera de $", Cuota
+Ifelse
+    Cuota = Monto * 0.02
+    Escribir "La cuota a abonar por el cliente sera de $", Cuota
+FinIf
+Fin

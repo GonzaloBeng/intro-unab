@@ -1,0 +1,20 @@
+
+
+{Declaro variables}
+mayor, num: Entero
+
+{Programa} 
+Continua <- "S"
+MontoAcum <- 0
+
+Mientras mayor >= 0 Hacer 
+    Escribir "Ingrese un numero mayor a 0"
+    Leer num
+    Si num > mayor 
+        mayor = num
+    Sino num = 0 
+        Escribir "El mayor numero ingresado es ", mayor
+        Break
+    FinSi
+FinMientras
+Fin
