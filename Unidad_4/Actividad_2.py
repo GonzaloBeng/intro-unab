@@ -11,11 +11,12 @@ actividad =  input('''\n Que tipo de actividad quiere calcular? Ingresa el numer
     1. Dormir
     2. Sentarse
     ''')
-tiempo = int(input('Ingrese la cantidad de minutos que realizara la actividad '))
 
-if actividad == 1:
+if actividad == '1':
+    tiempo = int(input('Ingrese la cantidad de minutos que realizara la actividad '))
     print('Las calorias consumidas son de: ', (tiempo * 1.08))
-elif actividad == 2:
+elif actividad == '2':
+    tiempo = int(input('Ingrese la cantidad de minutos que realizara la actividad '))
     print('Las calorias consumidas son de: ', (tiempo * 1.66))
 else:
     print('Ingrese una opcion valida')
