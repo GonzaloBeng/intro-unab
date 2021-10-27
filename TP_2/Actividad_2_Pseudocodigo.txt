@@ -4,16 +4,22 @@
 mayor, num: Entero
 
 {Programa} 
-Continua <- "S"
-MontoAcum <- 0
 
 Mientras mayor >= 0 Hacer 
-    Escribir "Ingrese un numero mayor a 0"
+    Escribir "Ingrese un numero"
     Leer num
     Si num > mayor 
         mayor = num
+        totalValores = totalValores + 1
+        Si num % 2:
+            totalImpares = totalImpares + 1
+        Sino
+            totalPares = totalPares + 1
+        FinSi
     Sino num = 0 
         Escribir "El mayor numero ingresado es ", mayor
+        Escribir 'La cantidad de valores ingresados es ', totalValores
+        Escribir 'La cantidad de numeros pares es de ', totalPares, 'y de impares', totalImpares
         Break
     FinSi
 FinMientras

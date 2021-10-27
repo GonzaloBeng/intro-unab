@@ -2,26 +2,43 @@
 
 {Declaro variables}
 alumAprob, contador, acumNotas, promAprob, nota: Entero
-opcion = String
+mayor, notasDesaprob, alumDesaprob, promDesaprob: Entero
+opcion: String
 
 {Programa} 
-opcion <- Escribir 'Analizar calificaciones? S para si:'
+opcion <- Escribir 'Analizar calificaciones? S para si: '
 alumAprob <- 0
 contador <- 0
 acumNotas <- 0
 promAprob <- 0
+mayor <- 0
+notasDesaprob <- 0
+alumDesaprob <- 0
+promDesaprob <- 0
 
 Mientras opcion = 'S' Hacer 
     Escribir "Ingrese la nota del alumno"
     Leer nota
-    Si nota >= 4 
-        acumNotas <- acumNotas + nota
-        alumAprob <- alumAprob + 1
-        promAprob <- promAprob + 1
-    contador <- contador + 1
-    opcion <- Escribir 'Continuar? S para si: '
+    Si nota >= 4 and nota <= 10 Hacer
+            notasAprob = notasAprob + nota
+            alumAprob = alumAprob + 1
+            promAprob = promAprob + 1
+            contador = contador + 1
+            Si nota > mayor Hacer
+                mayor = nota
+            FinSi
+    Sino nota > 10 Hacer
+        Escribir 'Ingrese una nota valida'
+    DeOtroModo:
+        notasDesaprob = notasDesaprob + nota
+        alumDesaprob = alumDesaprob + 1
+        promDesaprob = promDesaprob + 1
+        contador = contador + 1
     FinSi
+    opcion <- Escribir 'Continuar? S para si: '
 FinMientras
-Escribir 'Porcentaje de alumnos aprobados: ', alumAprob*100)/contador
-Escribir 'Promedio de los alumnos aprobados: ', (acumNotas/promAprob)
+Escribir 'Porcentaje de alumnos aprobados: ', (alumAprob*100)/contador,'%'
+Escribir 'Promedio de los alumnos aprobados: ', (notasAprob/promAprob)
+Escribir 'Promedio de los alumnos desaprobados: ', (notasDesaprob/promDesaprob)
+Escribir 'La nota mas alta de los aprobados es ', mayor
 Fin
