@@ -35,7 +35,9 @@ while continua == 'S':
         print(nombreApellido,'su nuevo sueldo con aumento es de: ',(sueldo + sueldo * 0.25))
     else:
         print('Hubo un error en el ingreso de datos')
-    print('El promedio de edad femenino es de ', promMuj/contMuj, 'años')
-    print('El promedio de edad femenino es de ', promHom/contHom, 'años')
-
-
+    if (contMuj > 0):
+        print('El promedio de edad femenino es de ', promMuj/contMuj, 'años')
+        print('El promedio de edad masculino es de 0 años')
+    elif contHom > 0:
+        print('El promedio de edad femenino es de ', promHom/contHom, 'años')
+        print('El promedio de edad femenino es de 0 años')
