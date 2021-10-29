@@ -15,13 +15,15 @@ while mayor >= 0:
     num = int(input('Ingrese un numero ')) 
     if num > mayor:
         mayor = num
-        totalValores = totalValores + 1
-        if num % 2:
-            totalImpares = totalImpares + 1
-        else:
-            totalPares = totalPares + 1
+    elif num < 0:
+        print('Ingrese solo numeros positivos')
     elif num == 0:
-        print('El mayor numero ingresado es ', mayor)
-        print('La cantidad de valores ingresados es ', totalValores)
-        print('La cantidad de numeros pares es de ', totalPares, 'y de impares', totalImpares)
         break
+    if num % 2 == 0:
+        totalPares = totalPares + 1    
+    else:
+        totalImpares = totalImpares + 1
+    totalValores = totalValores + 1
+print('El mayor numero ingresado es ', mayor)
+print('La cantidad de valores ingresados es ', totalValores)
+print('La cantidad de numeros pares es de ', totalPares, 'y de impares', totalImpares)
