@@ -8,5 +8,7 @@ antiguedad = int(input('Ingrese la antigüedad del empleado '))
 
 if antiguedad > 7:
     print('El nuevo sueldo del empleado es de: ', (sueldoActual + sueldoActual * 0.10))
-else:
+elif antiguedad < 7:
     print('El empleado no recibe aumento, su sueldo es de: ', sueldoActual )
+else:
+    print('Ingrese un numero valido.')
