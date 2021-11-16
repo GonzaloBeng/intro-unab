@@ -1,0 +1,91 @@
+
+
+
+{Inicio}
+{Declaro las variables}
+contFilosofia = Entero
+contHistoria = Entero
+contLiteratura = Entero
+contadorTotal = Entero
+mayorPaginas = Entero
+mayorTitulo = String
+mayorAutor = String
+menorTitulo = String
+menorPaginas = Entero
+acumPaginas = Entero
+
+{Programa}
+{Defino la funcion}
+def libros():
+    {Defino los valores de las variables a usar}
+    contFilosofia <- 0
+    contHistoria <- 0
+    contLiteratura <- 0
+    contadorTotal <- 0
+    mayorPaginas <- 0
+    mayorTitulo <- ''
+    mayorAutor <- ''
+    menorTitulo <- ''
+    menorPaginas <- 0
+    acumPaginas <- 0
+
+    Para i DESDE 1 HASTA 20 Hacer:
+        titulo <- Escribir 'Ingrese el titulo del libro: '
+        autor <- Escribir 'Ingrese el Autor del libro: '
+        tema <- Escribir ''' Ingrese el tema del libro:
+                1. Filosofia
+                2. Historia
+                3. Literatura
+                '''
+        paginas <- Escribir 'Ingrese la cantidad de paginas: '
+        Leer titulo, autor, tema, paginas
+
+        {Consulto el tema del libro}
+        SI tema == '1' Entonces:
+            contFilosofia += 1
+            contadorTotal +=1
+        SINO tema == '2' Entonces:
+            contHistoria +=1
+            contadorTotal +=1
+        SINO tema == '3' Entonces:
+            contLiteratura += 1
+            contadorTotal +=1
+        DEOTROMODO Hacer:
+            print('Ingrese un tema valido.')
+        FinSi
+
+        {Determino el libro con mayor y menor paginas}
+        SI mayorPaginas < paginas Entonces:
+            mayorPaginas = paginas
+            mayorTitulo = titulo
+            mayorAutor = autor
+        SI menorPaginas == 0 Entonces:
+            menorTitulo = titulo
+            menorPaginas = paginas
+        SINO menorPaginas > paginas Entonces:
+            menorTitulo = titulo
+            menorPaginas = paginas
+        acumPaginas += paginas
+        FinSi
+    FinPara
+    
+    {Muestro por pantalla}
+    Escribir f'''La cantidad de libros ingresados es de: 
+            {contFilosofia} libro/s de Filosofia,
+            {contHistoria} libro/s de Historia,
+            y {contLiteratura} libro/s de Literatura.'''
+
+    Escribir f'''El promedio de libros correspondiente es de: 
+            Filosofia: {(contFilosofia*100)/contadorTotal}%
+            Historia: {(contHistoria*100)/contadorTotal}%
+            Literatura: {(contLiteratura*100)/contadorTotal}%.'''
+    
+    Escribir f'''{mayorTitulo} de {mayorAutor} es el libro con mas paginas: {mayorPaginas}'''
+    Escribir f'''{menorTitulo} es el libro con menos paginas: {menorPaginas}'''
+    Escribir f'''El promedio de paginas por libro es de {acumPaginas/contadorTotal}'''
+
+
+{Llamo a la funcion}
+libros()
+
+{Fin}
